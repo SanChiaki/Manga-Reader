@@ -1,0 +1,82 @@
+@font-face {font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
+
+.inputContainer{
+  position: fixed;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  top:0;right:0;bottom: 0;left:0;
+  background-color: white;
+  z-index:999;
+}
+
+#dirInput,#zipInput{
+  display: none;
+}
+
+.inputWidget{
+  text-align: center;
+}
+
+.inputButton{
+  cursor: pointer;
+  display: inline-block;
+  height:100px;
+  line-height: 100px;
+  width:100px;
+  background-color: #7B72E9;
+  border-radius: 50%;
+  color:whitesmoke
+}
+
+.inputButton:first-child{
+  margin-bottom:20px;
+}
+
+#imgContainer{
+  display: -webkit-flex;
+  display: flex;
+  justify-content:center;
+}
+
+#pageDown,#pageUp,#pageClose{
+  position: fixed;
+  cursor: pointer;
+  background-color: #eee;
+  line-height: normal;
+}
+
+#pageDown{
+  left:0;
+  top:45%;
+}
+
+#pageUp{
+  right:0;
+  top:45%;
+}
+
+#pageDown>span,#pageUp>span{
+  font-size:50px;
+}
+
+#pageClose{
+  right:0;
+  top:0;
+  border-radius: 50%;
+}
+#pageClose>span{
+  font-size:30px;
+}
+
+.pageSelect{
+  position: fixed;
+  top:0;
+}

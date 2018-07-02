@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ComicReader</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/jszip/3.1.5/jszip.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+  <div id="app">
+      <div class="inputContainer"v-show="view">
+        <div class="inputWidget">
+          <label class="inputButton" for="dirInput">打开文件夹</label>
+          <input type="file" webkitdirectory id="dirInput">
+        </div>
+        <div class="inputWidget">
+          <label class="inputButton" for="zipInput">打开压缩文件</label>
+          <input type="file" id="zipInput">
+        </div>
+      </div>
+      <button id="pageDown" @click="pageDown"><span class="iconfont">&#xe697;</span></button>
+      <button id="pageUp" @click="pageUp"><span class="iconfont">&#xe6a7;</span></button>
+      <button id="pageClose" @click="pageClose"><span class="iconfont">&#xe69a;</span></button>
+      <span class="pageSelect">第<input style="width:16px" type="text" v-model.number="page">页</span>
+      <div id="imgContainer" :style="pageSize">
+        <img :src="images[page+1]" style="height:100%">
+        <img :src="images[page]" style="height:100%">
+      </div>
+  </div>
+  <!-- SCRIPT -->
+  <script src="main.js"></script>
+</body>
+</html>
